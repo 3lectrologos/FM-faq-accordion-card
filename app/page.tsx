@@ -18,8 +18,8 @@ const contentArray = [
   'Chat and email support is available 24/7. Phone lines are open during normal business hours.'
 ]
 
-function Accordion({ title, content, className='' }: { key: number, title: string, content: string, className?: string }) {
-  const [active, setActive] = useState(false)
+function Accordion({ title, content, className='', initActive=false }: { key: number, title: string, content: string, className?: string, initActive?:boolean }) {
+  const [active, setActive] = useState(initActive)
   const [hover, setHover] = useState(false)
   return (
     <div
@@ -29,7 +29,7 @@ function Accordion({ title, content, className='' }: { key: number, title: strin
       onMouseLeave={() => setHover(false)}
     >
       <div className={`flex flex-row justify-between`}>
-        <span className={`text-[13px] leading-[13px] ${active ? 'text-primaryblue font-bold' : 'text-textverydark'} lg:text-[14px] lg:leading-[14px] ${hover ? 'lg:transition lg:text-primaryred' : ''}`}>
+        <span className={`transition text-[13px] leading-[13px] ${active ? 'text-primaryblue font-bold' : 'text-textverydark'} lg:text-[14px] lg:leading-[14px] ${hover ? 'lg:transition lg:text-primaryred' : ''}`}>
           {title}
         </span>
         <div className={`flex flex-col justify-center items-center`}>
@@ -69,7 +69,9 @@ export default function Home() {
           </h1>
           {titleArray.map((title, index) => {
             return <Accordion className={`z-50`}
-              key={index} title={title} content={contentArray[index]} />
+              key={index} title={title} content={contentArray[index]}
+              initActive={index === 1}
+            />
           })}
         </div>
       </div>
