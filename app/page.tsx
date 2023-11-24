@@ -53,14 +53,14 @@ export default function Home() {
   return (
     <div className={`flex flex-col min-h-screen bg-gradient-to-b from-bgviolet to-bgblue lg:justify-center`}>
       <div className={`relative flex justify-center items-center pt-[148px] pb-[86px] lg:py-0`}>
-        <img className={`hidden absolute top-0 left-[50%] transform -translate-x-[290.5%] translate-y-[112%] lg:block lg:w-[190px] z-50`}
+        <img className={`hidden absolute top-0 left-[50%] transform -translate-x-[290.5%] translate-y-[112.5%] lg:block lg:w-[190px] z-50`}
           src='/images/illustration-box-desktop.svg' alt='Box illustration' />
         <div className={`relative w-[327px] flex flex-col bg-white rounded-3xl px-6 pb-12 pt-[136px] shadow-[0_50px_50px_-20px_rgba(53,18,122,0.5)] lg:w-[920px] lg:pt-16 lg:pl-[475px] lg:pr-24 lg:pb-[85px] lg:overflow-hidden`}>
           <picture className={`w-[236px] absolute top-0 left-[50%] transform -translate-x-1/2 translate-y-[2%] lg:w-[964px] lg:top-0 lg:-left-0 lg:-translate-x-[60%] lg:-translate-y-[30.5%]`}>
             <source srcSet='/images/bg-pattern-desktop.svg' media='(min-width: 1024px)' />
             <img src='/images/bg-pattern-mobile.svg' alt='Background pattern' />
           </picture>
-          <picture className={`w-[236px] absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[60%] lg:w-[472px] lg:top-0 lg:left-0 lg:-translate-x-[18%] lg:translate-y-[20%]`}>
+          <picture className={`w-[236px] absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[60%] lg:w-[472px] lg:top-0 lg:left-0 lg:-translate-x-[17.5%] lg:translate-y-[20%]`}>
             <source srcSet='/images/illustration-woman-online-desktop.svg' media='(min-width: 1024px)' />
             <img src='/images/illustration-woman-online-mobile.svg' alt='Background illustration' />
           </picture>
