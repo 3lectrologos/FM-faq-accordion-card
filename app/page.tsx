@@ -52,7 +52,7 @@ export default function Home() {
     <div className={`flex flex-col min-h-screen bg-gradient-to-b from-bgviolet to-bgblue`}>
       <div className={`flex justify-center items-center pt-[148px] pb-[86px]`}>
         <div className={`relative w-[327px] flex flex-col bg-white rounded-3xl px-6 pb-12 pt-[136px] shadow-[0_50px_50px_-20px_rgba(53,18,122,0.5)]`}>
-          <img className={`absolute top-0 left-[50%] transform -translate-x-1/2 translate-y-[3%]`}
+          <img className={`absolute top-0 left-[50%] transform -translate-x-1/2 translate-y-[2%]`}
                src='/images/bg-pattern-mobile.svg' width={236} />
           <img className={`absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[60%]`}
             src='/images/illustration-woman-online-mobile.svg' width={236} />
