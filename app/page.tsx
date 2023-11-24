@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 
 const titleArray = [
@@ -19,7 +18,7 @@ const contentArray = [
   'Chat and email support is available 24/7. Phone lines are open during normal business hours.'
 ]
 
-function Accordion({ title, content, ...props }: { key: number, title: string, content: string }) {
+function Accordion({ title, content, className='' }: { key: number, title: string, content: string, className?: string }) {
   const [active, setActive] = useState(false)
   return (
     <div
@@ -53,12 +52,12 @@ export default function Home() {
       <div className={`flex justify-center items-center pt-[148px] pb-[86px]`}>
         <div className={`relative w-[327px] flex flex-col bg-white rounded-3xl px-6 pb-12 pt-[136px] shadow-[0_50px_50px_-20px_rgba(53,18,122,0.5)]`}>
           <img className={`absolute top-0 left-[50%] transform -translate-x-1/2 translate-y-[2%]`}
-               src='/images/bg-pattern-mobile.svg' width={236} />
+               src='/images/bg-pattern-mobile.svg' width={236} alt='Background pattern'/>
           <img className={`absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[60%]`}
-            src='/images/illustration-woman-online-mobile.svg' width={236} />
-          <span className={`text-[32px] leading-[32px] font-bold mb-[18px] text-center`}>
+            src='/images/illustration-woman-online-mobile.svg' width={236} alt='Background illustration' />
+          <h1 className={`text-[32px] leading-[32px] font-bold mb-[18px] text-center`}>
             FAQ
-          </span>
+          </h1>
           {titleArray.map((title, index) => {
             return <Accordion key={index} title={title} content={contentArray[index]} />
           })}
